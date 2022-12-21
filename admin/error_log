@@ -1,0 +1,103 @@
+[25-Aug-2022 01:39:53 Asia/Manila] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (-2) in /home/elokshjs/public_html/classes/DBConnection.php on line 18
+[25-Aug-2022 01:39:53 Asia/Manila] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/elokshjs/public_html/classes/SystemSettings.php on line 16
+[25-Aug-2022 01:39:53 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/elokshjs/public_html/classes/SystemSettings.php:17
+Stack trace:
+#0 /home/elokshjs/public_html/classes/SystemSettings.php(191): SystemSettings->load_system_info()
+#1 /home/elokshjs/public_html/config.php(9): require_once('/home/elokshjs/...')
+#2 /home/elokshjs/public_html/admin/login.php(1): require_once('/home/elokshjs/...')
+#3 {main}
+  thrown in /home/elokshjs/public_html/classes/SystemSettings.php on line 17
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_SERVER - assumed 'DB_SERVER' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_USERNAME - assumed 'DB_USERNAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_SERVER - assumed 'DB_SERVER' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_USERNAME - assumed 'DB_USERNAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'DB_SERVER' (-2) in /home/elokshjs/public_html/classes/DBConnection.php on line 18
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/elokshjs/public_html/classes/SystemSettings.php on line 16
+[25-Aug-2022 05:14:45 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/elokshjs/public_html/classes/SystemSettings.php:17
+Stack trace:
+#0 /home/elokshjs/public_html/classes/SystemSettings.php(191): SystemSettings->load_system_info()
+#1 /home/elokshjs/public_html/config.php(9): require_once('/home/elokshjs/...')
+#2 /home/elokshjs/public_html/admin/index.php(1): require_once('/home/elokshjs/...')
+#3 {main}
+  thrown in /home/elokshjs/public_html/classes/SystemSettings.php on line 17
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_SERVER - assumed 'DB_SERVER' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_USERNAME - assumed 'DB_USERNAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_SERVER - assumed 'DB_SERVER' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_USERNAME - assumed 'DB_USERNAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/elokshjs/public_html/classes/SystemSettings.php on line 190
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown MySQL server host 'DB_SERVER' (-2) in /home/elokshjs/public_html/classes/DBConnection.php on line 18
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/elokshjs/public_html/classes/SystemSettings.php on line 16
+[25-Aug-2022 05:14:50 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/elokshjs/public_html/classes/SystemSettings.php:17
+Stack trace:
+#0 /home/elokshjs/public_html/classes/SystemSettings.php(191): SystemSettings->load_system_info()
+#1 /home/elokshjs/public_html/config.php(9): require_once('/home/elokshjs/...')
+#2 /home/elokshjs/public_html/admin/login.php(1): require_once('/home/elokshjs/...')
+#3 {main}
+  thrown in /home/elokshjs/public_html/classes/SystemSettings.php on line 17
+[26-Aug-2022 11:23:01 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[26-Aug-2022 11:23:01 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[26-Aug-2022 11:28:34 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[26-Aug-2022 11:28:38 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 00:53:48 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 00:53:49 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 01:05:36 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 01:05:39 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 02:40:36 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 02:40:36 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[27-Aug-2022 02:45:52 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/rizzabuq/public_html/classes/SystemSettings.php:17
+Stack trace:
+#0 /home/rizzabuq/public_html/classes/SystemSettings.php(191): SystemSettings->load_system_info()
+#1 /home/rizzabuq/public_html/config.php(9): require_once('/home/rizzabuq/...')
+#2 /home/rizzabuq/public_html/admin/index.php(1): require_once('/home/rizzabuq/...')
+#3 {main}
+  thrown in /home/rizzabuq/public_html/classes/SystemSettings.php on line 17
+[27-Aug-2022 03:04:54 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:04:54 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:04:54 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:04:54 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:05:12 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:05:12 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:05:12 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:05:12 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:05:24 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:05:24 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:05:24 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:05:24 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:06:08 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:06:08 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:06:08 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:06:08 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:09:08 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:09:08 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:09:08 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:09:08 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:12:00 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:12:00 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:12:00 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:12:00 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:17:13 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:17:13 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:17:13 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:17:13 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:19:14 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:19:14 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:19:14 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:19:14 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:28:24 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:28:24 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:28:24 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:28:24 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[27-Aug-2022 03:28:28 Asia/Manila] PHP Notice:  Undefined variable: status in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 59
+[27-Aug-2022 03:28:28 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 73
+[27-Aug-2022 03:28:28 Asia/Manila] PHP Notice:  Undefined variable: doctor_code in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 80
+[27-Aug-2022 03:28:28 Asia/Manila] PHP Notice:  Undefined variable: id in /home/rizzabuq/public_html/admin/doctor/view_doctor.php on line 120
+[28-Aug-2022 22:21:44 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[29-Aug-2022 15:07:42 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3
+[29-Aug-2022 15:07:45 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/admin/user/index.php on line 3

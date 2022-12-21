@@ -1,0 +1,196 @@
+[25-Aug-2022 06:42:47 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/elokshjs/public_html/classes/Master.php on line 149
+[25-Aug-2022 06:43:16 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/elokshjs/public_html/classes/Master.php on line 273
+[25-Aug-2022 06:43:32 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/elokshjs/public_html/classes/Master.php on line 579
+[25-Aug-2022 06:43:32 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/elokshjs/public_html/classes/Master.php on line 579
+[25-Aug-2022 06:43:52 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/elokshjs/public_html/classes/Master.php on line 579
+[25-Aug-2022 06:43:52 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/elokshjs/public_html/classes/Master.php on line 579
+[25-Aug-2022 17:54:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[25-Aug-2022 17:54:57 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[25-Aug-2022 17:55:23 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 17:55:23 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 18:55:15 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 18:55:15 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 18:57:50 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[25-Aug-2022 19:03:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[25-Aug-2022 19:04:09 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 19:04:09 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[25-Aug-2022 19:06:44 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[25-Aug-2022 19:35:22 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 02:42:40 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 02:43:39 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[27-Aug-2022 02:44:01 Asia/Manila] PHP Notice:  Undefined variable: service_id in /home/rizzabuq/public_html/classes/Master.php on line 579
+[27-Aug-2022 02:44:01 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[27-Aug-2022 02:45:22 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/rizzabuq/public_html/classes/SystemSettings.php:17
+Stack trace:
+#0 /home/rizzabuq/public_html/classes/SystemSettings.php(191): SystemSettings->load_system_info()
+#1 /home/rizzabuq/public_html/config.php(9): require_once('/home/rizzabuq/...')
+#2 /home/rizzabuq/public_html/classes/Login.php(2): require_once('/home/rizzabuq/...')
+#3 {main}
+  thrown in /home/rizzabuq/public_html/classes/SystemSettings.php on line 17
+[27-Aug-2022 02:49:26 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[27-Aug-2022 02:52:57 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 02:53:13 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[27-Aug-2022 02:54:02 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[27-Aug-2022 04:44:25 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:45:31 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[27-Aug-2022 04:45:43 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:46:22 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:46:41 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[27-Aug-2022 04:49:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:49:48 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:50:22 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:50:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:55:22 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:56:09 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[27-Aug-2022 04:56:48 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[27-Aug-2022 05:34:28 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 16:38:27 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 20:25:09 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 20:26:28 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 20:57:46 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:04:30 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:13:29 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[29-Aug-2022 21:14:01 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[29-Aug-2022 21:14:30 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 273
+[29-Aug-2022 21:19:24 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:19:44 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:29:28 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:36:01 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:36:17 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:39:54 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:39:59 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:40:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:40:43 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:41:59 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:42:42 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:42:47 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:43:28 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:43:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:44:05 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:44:10 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:44:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:44:49 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:45:31 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:45:36 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:46:43 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:46:49 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:46:53 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:47:28 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:47:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:48:29 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:48:34 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:49:16 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:49:25 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:50:16 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:50:22 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:50:58 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:51:05 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:52:01 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:52:05 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:52:46 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:52:53 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:53:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:53:50 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:54:40 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:54:51 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:55:35 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:55:44 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:56:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:56:42 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:57:46 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:57:55 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:58:35 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:58:47 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:59:21 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 21:59:27 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:00:09 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:00:18 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:01:06 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:01:23 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:02:34 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:05:18 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:07:07 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:07:13 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:08:34 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:12:48 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:14:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:14:59 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:15:05 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:16:06 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:17:01 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:17:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:17:17 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:17:21 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:18:19 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:19:37 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:20:41 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:20:55 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:21:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:21:56 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:22:47 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:25:06 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:27:07 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:28:40 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:30:03 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:31:08 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:31:52 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:32:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:32:58 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:33:35 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:35:39 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:36:24 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:38:20 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:39:50 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:43:43 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:44:09 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:45:40 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:46:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:46:53 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:48:11 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:50:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:51:12 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:52:16 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[29-Aug-2022 22:53:43 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[29-Aug-2022 22:54:12 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:24:08 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:25:58 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:37:25 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:38:27 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:39:18 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:40:59 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:43:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:44:28 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:46:14 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:47:14 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:51:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:52:13 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 15:55:42 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 15:56:35 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:08:29 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:09:58 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 16:11:24 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:30:08 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:30:23 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:30:29 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:30:43 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:31:23 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:31:47 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 16:32:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 16:34:41 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 17:24:56 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 17:25:55 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 17:32:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 17:33:23 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 17:34:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 17:35:06 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[30-Aug-2022 20:16:33 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 20:16:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 20:17:32 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[30-Aug-2022 20:17:38 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 00:01:49 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 00:03:51 Asia/Manila] PHP Warning:  Invalid argument supplied for foreach() in /home/rizzabuq/public_html/classes/Master.php on line 579
+[31-Aug-2022 00:07:31 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 02:02:45 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 02:57:54 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 03:47:50 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
+[31-Aug-2022 03:55:11 Asia/Manila] PHP Notice:  Undefined index: middlename in /home/rizzabuq/public_html/classes/Master.php on line 149
