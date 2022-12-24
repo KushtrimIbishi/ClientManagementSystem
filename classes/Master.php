@@ -162,7 +162,7 @@ Class Master extends DBConnection {
 		}else{
 			$sql = "UPDATE `client_list` set {$data} where id = '{$id}'";
 		}
-		$save = $this->conn->query($sql);
+		$save = $this->conn->query($sql,$sql2);
 		if($save){
 			$resp['status'] = 'success';
 			if(empty($id))
@@ -190,33 +190,24 @@ Class Master extends DBConnection {
 					$resp['sql'] = 	$sql2;
 				}
 			}
-			if(isset($_FILES['avatar']) && $_FILES['avatar']['tmp_name'] != ''){
-				$fname = 'uploads/client-'.$client_id.'.png';
-				$dir_path =base_app. $fname;
-				$upload = $_FILES['avatar']['tmp_name'];
-				$type = mime_content_type($upload);
-				$allowed = array('image/png','image/jpeg');
-				if(!in_array($type,$allowed)){
-					$resp['msg'].=" But Image failed to upload due to invalid file type.";
-				}else{
-					$new_height = 200; 
-					$new_width = 200; 
-			
-					list($width, $height) = getimagesize($upload);
-					$t_image = imagecreatetruecolor($new_width, $new_height);
-					imagealphablending( $t_image, false );
-					imagesavealpha( $t_image, true );
-					$gdImg = ($type == 'image/png')? imagecreatefrompng($upload) : imagecreatefromjpeg($upload);
-					imagecopyresampled($t_image, $gdImg, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-					if($gdImg){
-							if(is_file($dir_path))
-							unlink($dir_path);
-							$uploaded_img = imagepng($t_image,$dir_path);
-							imagedestroy($gdImg);
-							imagedestroy($t_image);
-					}else{
-					$resp['msg'].=" But Image failed to upload due to unkown reason.";
+			$data2 = "";
+			foreach($seanca_id as $k =>$v){
+				if(in_array($k,array('client_id','seanca_id','name')))
+				continue;
+				if(!empty($data2)) $data2 .=", ";
+				$data2 .= "('{$client_id}','{$v}','{$k}')";
+			}
+			if(!empty($data2)){
+				$this->conn->query("DELETE FROM `client_seancat` where client_id = '{$client_id}'");
+				$sql2 = "INSERT INTO `client_seancat` (`client_id`,`seanca_id`,`name`) VALUES {$data2}";
+				$save = $this->conn->query($sql2);
+				if(!$save){
+					$resp['status'] = 'failed';
+					if(empty($id)){
+						$this->conn->query("DELETE FROM `client_list` where id '{$client_id}'");
 					}
+					$resp['msg'] = 'Ruajtja e fatures deshtoi. Error: '.$this->conn->error;
+					$resp['sql'] = 	$sql2;
 				}
 			}
 		}else{

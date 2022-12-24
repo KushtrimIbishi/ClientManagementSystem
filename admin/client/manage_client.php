@@ -7,6 +7,7 @@ if(isset($_GET['id'])){
         }
 
         $qry_meta = $conn->query("SELECT * FROM client_meta where client_id = '{$id}'");
+        $qry_meta2 = $conn->query("SELECT i.*,s.name FROM client_seancat i inner join seancat_list s on i.seanca_id = s.id where i.client_id = '{$id}'");
         while($row = $qry_meta->fetch_assoc()){
             if(!isset(${$row['meta_field']}))
             ${$row['meta_field']} = $row['meta_value'];
@@ -91,31 +92,65 @@ if(isset($_GET['id'])){
                             <?php endif; ?>
                         </div>
                         <div class="row">
-                            <div class="form-group col-sm-4">
-                                <label for="termin_number" class="control-label text-info">Numri i seances</label>
-                                <br>
-                                <select name="cars" id="cars">
-                                    <option value="1">Seanca 1</option>
-                                    <option value="2">Seanca 2</option>
-                                    <option value="3">Seanca 3</option>
-                                    <option value="4">Seanca 4</option>
-                                    <option value="5">Seanca 5</option>
-                                    <option value="6">Seanca 6</option>
-                                    <option value="7">Seanca 7</option>
-                                    <option value="8">Seanca 8</option>
-                                    <option value="9">Seanca 9</option>
-                                    <option value="10">Seanca 10</option>
-                                    <option value="11">Seanca 11</option>
-                                    <option value="12">Seanca 12</option>
+                        <fieldset class="border-bottom border-info">
+                        <legend>Sherbimet</legend>
+                        <div class="row align-items-end">
+                            <div class="form-group col-sm-8">
+                                <label for="seanca_id" class="control-label text-info">Sherbimi</label>
+                                <select id="seanca_id" class="custom-select custom-select-sm rounded-0 select2" data-placeholder="Zgjedh sherbimin">
+                                    <option <?php echo !isset($seanca_id) ? "selected" : '' ?> disabled></option>
+                                    <?php 
+                                    $seanca_arr = array();
+                                    $seanca_qry = $conn->query("SELECT * FROM seancat_list where `status` = 1");
+                                    while($row2 = $seanca_qry->fetch_assoc()):
+                                        $seanca_arr[$row2['id']] = $row2;
+                                    ?>
+                                    <option value="<?php echo $row2['id'] ?>" <?php echo isset($seanca_id) && $seanca_id == $row2['id'] ? "selected" : '' ?>><?php echo $row2['name'] ?></option>
+                                    <?php endwhile; ?>
                                 </select>
                             </div>
-                            <div class="form-group col-sm-4">
+                            <div class="form-group col-sm-8">
+                               <button class="btn btn-flat btn-primary btn sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto tek lista</button>
+                            </div>
+                        </div>
+                        <table class="table table-hover table-striped table-bordered" id="seanca-list">
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                                <tr class="bg-lightblue text-light">
+                                    <th class="px-2 py-2 text-center"></th>
+                                    <th class="px-2 py-2 text-center">Sherbimi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php 
+                                if(isset($id)):
+                                while($row2 = $qry_meta2->fetch_assoc()):
+                            ?>
+                                <tr>
+                                    <td class="px-1 py-2 text-center align-middle">
+                                        <button class="btn-sn btn-flat btn-outline-danger rem_btn" onclick="rem_row($(this))"><i class="fa fa-times"></i></button>
+                                    </td>
+                                    <td class="px-1 py-2 align-middle seanca">
+                                        <span class="visible"><?php echo $row2['name'] ?></span>
+                                        <input type="hidden" name="seanca_id[]" value="<?php echo $row2['seanca_id'] ?>">
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+                            </tbody>
+                        </table>
+                        </div>
+                    </fieldset>
+                            <!-- <div class="form-group col-sm-4">
                                 <label for="termin_date" class="control-label text-info">Data e seances</label>
                                 <input type="text" class="form-control form-control-sm rounded-0" id="termin_date" name="termin_date" value="<?php echo isset($termin_date) ? $termin_date : '' ?>" >
                             </div>
                             <div class="form-group col-sm-4" style="margin-top: 25px;">
                             <button class="btn btn-flat btn-primary btn sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto nje seance</button>
-                            </div>
+                            </div> -->
                         </div>
                     </fieldset>
 
@@ -142,7 +177,19 @@ if(isset($_GET['id'])){
         <a class="btn btn-flat btn-sn btn-dark" href="<?php echo base_url."admin?page=client" ?>">Anulo</a>
     </div>
 </div>
+<table id="tbl-clone" class="d-none">
+    <tr>
+        <td class="px-1 py-2 text-center align-middle">
+            <button class="btn-sn btn-flat btn-outline-danger rem_btn"><i class="fa fa-times"></i></button>
+        </td>
+        <td class="px-1 py-2 align-middle seanca">
+            <span class="visible"></span>
+            <input type="hidden" name="seanca_id[]">
+        </td>
+    </tr>
+</table>
 <script>
+    var seancat = $.parseJSON('<?php echo json_encode($seanca_arr) ?>');
     $(function(){
 		$('.select2').select2({
 			width:'resolve'
@@ -184,7 +231,32 @@ if(isset($_GET['id'])){
 				}
 			})
 		})
+
+        $('#add_to_list').click(function(){
+            var seanca_id = $('#seanca_id').val()
+            if(seanca_id <= 0)
+            return false;
+            if($('#seanca-list tbody tr[data-id="'+seanca_id+'"]').length > 0){
+                alert_toast("Sherbimi është në listë!","warning")
+                return false;
+            }
+            var name = seancat[seanca_id].name || 'N/A';
+            var tr = $('#tbl-clone tr').clone()
+            tr.attr('data-id',seanca_id)
+            tr.find('input[name="seanca_id[]"]').val(seanca_id)
+            tr.find('.seanca .visible').text(name)
+            $('#seanca-list tbody').append(tr)
+            $('#seanca_id').val('').trigger('change')
+            calc()
+            tr.find('.rem_btn').click(function(){
+                rem_row($(this))
+            })
+        })
 	})
+    function rem_row(_this){
+        _this.closest('tr').remove()
+        calc()
+    }
 	function displayImg(input,_this) {
 	    if (input.files && input.files[0]) {
 	        var reader = new FileReader();
