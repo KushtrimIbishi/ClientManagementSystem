@@ -93,10 +93,10 @@ if(isset($_GET['id'])){
                         </div>
                         <div class="row">
                         <fieldset class="border-bottom border-info">
-                        <legend>Sherbimet</legend>
+                        <legend>Seancat</legend>
                         <div class="row align-items-end">
                             <div class="form-group col-sm-8">
-                                <label for="seanca_id" class="control-label text-info">Sherbimi</label>
+                                <label for="seanca_id" class="control-label text-info">Seanca</label>
                                 <select id="seanca_id" class="custom-select custom-select-sm rounded-0 select2" data-placeholder="Zgjedh sherbimin">
                                     <option <?php echo !isset($seanca_id) ? "selected" : '' ?> disabled></option>
                                     <?php 
@@ -121,7 +121,8 @@ if(isset($_GET['id'])){
                             <thead>
                                 <tr class="bg-lightblue text-light">
                                     <th class="px-2 py-2 text-center"></th>
-                                    <th class="px-2 py-2 text-center">Sherbimi</th>
+                                    <th class="px-2 py-2 text-center">Seanca</th>
+                                    <th class="px-2 py-2 text-center">Data e Seances</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -136,7 +137,9 @@ if(isset($_GET['id'])){
                                     <td class="px-1 py-2 align-middle seanca">
                                         <span class="visible"><?php echo $row2['name'] ?></span>
                                         <input type="hidden" name="seanca_id[]" value="<?php echo $row2['seanca_id'] ?>">
+                                        <input type="text" name="seanca_date[]" value="<?php echo $row2['seanca_date'] ?>">
                                     </td>
+                                    <td class="px-1 py-2 text-right align-middle seanca_date"><?php echo $row2['seanca_date'] ?></td>
                                 </tr>
                             <?php endwhile; ?>
                             <?php endif; ?>
@@ -185,7 +188,9 @@ if(isset($_GET['id'])){
         <td class="px-1 py-2 align-middle seanca">
             <span class="visible"></span>
             <input type="hidden" name="seanca_id[]">
+            <input type="hidden" name="seanca_date[]">
         </td>
+        <td class="px-1 py-2 text-right align-middle seanca"><input type="text" name="seanca_date[]"></td>
     </tr>
 </table>
 <script>
@@ -241,13 +246,15 @@ if(isset($_GET['id'])){
                 return false;
             }
             var name = seancat[seanca_id].name || 'N/A';
+            var seanca_date = seancat[seanca_id].seanca_date;
             var tr = $('#tbl-clone tr').clone()
             tr.attr('data-id',seanca_id)
             tr.find('input[name="seanca_id[]"]').val(seanca_id)
+            tr.find('input[name="seanca_date[]"]').val(seanca_date)
             tr.find('.seanca .visible').text(name)
+            tr.find('.seanca_date').text(seanca_date)
             $('#seanca-list tbody').append(tr)
             $('#seanca_id').val('').trigger('change')
-            calc()
             tr.find('.rem_btn').click(function(){
                 rem_row($(this))
             })

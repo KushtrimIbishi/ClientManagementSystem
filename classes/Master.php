@@ -192,14 +192,14 @@ Class Master extends DBConnection {
 			}
 			$data2 = "";
 			foreach($seanca_id as $k =>$v){
-				if(in_array($k,array('client_id','seanca_id','name')))
+				if(in_array($k,array('client_id','seanca_id','name','seanca_date')))
 				continue;
 				if(!empty($data2)) $data2 .=", ";
-				$data2 .= "('{$client_id}','{$v}','{$k}')";
+				$data2 .= "('{$client_id}','{$v}','{$d}','{$seanca_date[$k]}')";
 			}
 			if(!empty($data2)){
 				$this->conn->query("DELETE FROM `client_seancat` where client_id = '{$client_id}'");
-				$sql2 = "INSERT INTO `client_seancat` (`client_id`,`seanca_id`,`name`) VALUES {$data2}";
+				$sql2 = "INSERT INTO `client_seancat` (`client_id`,`seanca_id`,`name`,`seanca_date`) VALUES {$data2}";
 				$save = $this->conn->query($sql2);
 				if(!$save){
 					$resp['status'] = 'failed';
