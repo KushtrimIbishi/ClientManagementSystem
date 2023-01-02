@@ -7,7 +7,6 @@ if(isset($_GET['id'])){
         }
 
         $qry_meta = $conn->query("SELECT * FROM client_meta where client_id = '{$id}'");
-        $qry_meta2 = $conn->query("SELECT i.*,s.name FROM client_seancat i inner join seancat_list s on i.seanca_id = s.id where i.client_id = '{$id}'");
         while($row = $qry_meta->fetch_assoc()){
             if(!isset(${$row['meta_field']}))
             ${$row['meta_field']} = $row['meta_value'];
@@ -92,68 +91,85 @@ if(isset($_GET['id'])){
                             <?php endif; ?>
                         </div>
                         <div class="row">
-                        <fieldset class="border-bottom border-info">
-                        <legend>Seancat</legend>
-                        <div class="row align-items-end">
-                            <div class="form-group col-sm-8">
-                                <label for="seanca_id" class="control-label text-info">Seanca</label>
-                                <select id="seanca_id" class="custom-select custom-select-sm rounded-0 select2" data-placeholder="Zgjedh sherbimin">
-                                    <option <?php echo !isset($seanca_id) ? "selected" : '' ?> disabled></option>
-                                    <?php 
-                                    $seanca_arr = array();
-                                    $seanca_qry = $conn->query("SELECT * FROM seancat_list where `status` = 1");
-                                    while($row2 = $seanca_qry->fetch_assoc()):
-                                        $seanca_arr[$row2['id']] = $row2;
-                                    ?>
-                                    <option value="<?php echo $row2['id'] ?>" <?php echo isset($seanca_id) && $seanca_id == $row2['id'] ? "selected" : '' ?>><?php echo $row2['name'] ?></option>
-                                    <?php endwhile; ?>
-                                </select>
+                            <div class="form-group col-sm-2" style="margin-left:80px;">
+                                <label for="seanca_name1" class="control-label text-info">Seanca 1</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name1" name="seanca_name1" value="<?php echo isset($seanca_name1) ? $seanca_name1 : '' ?>" required>
+                          
+                                <label for="seanca_name2" class="control-label text-info">Seanca 2</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name2" name="seanca_name2" value="<?php echo isset($seanca_name2) ? $seanca_name2 : '' ?>" required>
+                        
+                                <label for="seanca_name3" class="control-label text-info">Seanca 3</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name3" name="seanca_name3" value="<?php echo isset($seanca_name3) ? $seanca_name3 : '' ?>" required>
+                         
+                                <label for="seanca_name4" class="control-label text-info">Seanca 4</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name4" name="seanca_name4" value="<?php echo isset($seanca_name4) ? $seanca_name4 : '' ?>" required>
+                       
+                                <label for="seanca_name5" class="control-label text-info">Seanca 5</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name5" name="seanca_name5" value="<?php echo isset($seanca_name5) ? $seanca_name5 : '' ?>" required>
+                         
+                                <label for="seanca_name6" class="control-label text-info">Seanca 6</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name6" name="seanca_name6" value="<?php echo isset($seanca_name6) ? $seanca_name6 : '' ?>" required>
                             </div>
-                            <div class="form-group col-sm-8">
-                               <button class="btn btn-flat btn-primary btn sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto tek lista</button>
+
+                            <div class="form-group col-sm-2">
+                                <label for="seanca_date1" class="control-label text-info">Data e Seances 1</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date1" name="seanca_date1" value="<?php echo isset($seanca_date1) ? $seanca_date1 : '' ?>" required>
+                          
+                                <label for="seanca_date2" class="control-label text-info">Data e Seances 2</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date2" name="seanca_date2" value="<?php echo isset($seanca_date2) ? $seanca_date2 : '' ?>" required>
+                        
+                                <label for="seanca_date3" class="control-label text-info">Data e Seances 3</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date3" name="seanca_date3" value="<?php echo isset($seanca_date3) ? $seanca_date3 : '' ?>" required>
+                         
+                                <label for="seanca_date4" class="control-label text-info">Data e Seances 4</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date4" name="seanca_date4" value="<?php echo isset($seanca_date4) ? $seanca_date4 : '' ?>" required>
+                       
+                                <label for="seanca_date5" class="control-label text-info">Data e Seances 5</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date5" name="seanca_date5" value="<?php echo isset($seanca_date5) ? $seanca_date5 : '' ?>" required>
+                         
+                                <label for="seanca_date6" class="control-label text-info">Data e Seances 6</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date6" name="seanca_date6" value="<?php echo isset($seanca_date6) ? $seanca_date6 : '' ?>" required>
                             </div>
-                        </div>
-                        <table class="table table-hover table-striped table-bordered" id="seanca-list">
-                            <colgroup>
-                                <col width="50%">
-                                <col width="50%">
-                            </colgroup>
-                            <thead>
-                                <tr class="bg-lightblue text-light">
-                                    <th class="px-2 py-2 text-center"></th>
-                                    <th class="px-2 py-2 text-center">Seanca</th>
-                                    <th class="px-2 py-2 text-center">Data e Seances</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php 
-                                if(isset($id)):
-                                while($row2 = $qry_meta2->fetch_assoc()):
-                            ?>
-                                <tr>
-                                    <td class="px-1 py-2 text-center align-middle">
-                                        <button class="btn-sn btn-flat btn-outline-danger rem_btn" onclick="rem_row($(this))"><i class="fa fa-times"></i></button>
-                                    </td>
-                                    <td class="px-1 py-2 align-middle seanca">
-                                        <span class="visible"><?php echo $row2['name'] ?></span>
-                                        <input type="hidden" name="seanca_id[]" value="<?php echo $row2['seanca_id'] ?>">
-                                        <input type="text" name="seanca_date[]" value="<?php echo $row2['seanca_date'] ?>">
-                                    </td>
-                                    <td class="px-1 py-2 text-right align-middle seanca_date"><?php echo $row2['seanca_date'] ?></td>
-                                </tr>
-                            <?php endwhile; ?>
-                            <?php endif; ?>
-                            </tbody>
-                        </table>
-                        </div>
-                    </fieldset>
-                            <!-- <div class="form-group col-sm-4">
-                                <label for="termin_date" class="control-label text-info">Data e seances</label>
-                                <input type="text" class="form-control form-control-sm rounded-0" id="termin_date" name="termin_date" value="<?php echo isset($termin_date) ? $termin_date : '' ?>" >
+
+                            <div class="form-group col-sm-2" style="margin-left:140px;">
+                                <label for="seanca_name7" class="control-label text-info">Seanca 7</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name7" name="seanca_name7" value="<?php echo isset($seanca_name7) ? $seanca_name7 : '' ?>" required>
+                          
+                                <label for="seanca_name8" class="control-label text-info">Seanca 8</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name8" name="seanca_name8" value="<?php echo isset($seanca_name8) ? $seanca_name8 : '' ?>" required>
+                        
+                                <label for="seanca_name9" class="control-label text-info">Seanca 9</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name9" name="seanca_name9" value="<?php echo isset($seanca_name9) ? $seanca_name9 : '' ?>" required>
+                         
+                                <label for="seanca_name10" class="control-label text-info">Seanca 10</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name10" name="seanca_name10" value="<?php echo isset($seanca_name10) ? $seanca_name10 : '' ?>" required>
+                       
+                                <label for="seanca_name11" class="control-label text-info">Seanca 11</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name11" name="seanca_name11" value="<?php echo isset($seanca_name11) ? $seanca_name11 : '' ?>" required>
+                         
+                                <label for="seanca_name12" class="control-label text-info">Seanca 12</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_name12" name="seanca_name12" value="<?php echo isset($seanca_name12) ? $seanca_name12 : '' ?>" required>
                             </div>
-                            <div class="form-group col-sm-4" style="margin-top: 25px;">
-                            <button class="btn btn-flat btn-primary btn sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto nje seance</button>
-                            </div> -->
+
+                            <div class="form-group col-sm-2">
+                                <label for="seanca_date7" class="control-label text-info">Data e Seances 7</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date7" name="seanca_date7" value="<?php echo isset($seanca_date7) ? $seanca_date7 : '' ?>" required>
+                          
+                                <label for="seanca_date8" class="control-label text-info">Data e Seances 8</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date8" name="seanca_date8" value="<?php echo isset($seanca_date8) ? $seanca_date8 : '' ?>" required>
+                        
+                                <label for="seanca_date9" class="control-label text-info">Data e Seances 9</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date9" name="seanca_date9" value="<?php echo isset($seanca_date9) ? $seanca_date9 : '' ?>" required>
+                         
+                                <label for="seanca_date10" class="control-label text-info">Data e Seances 10</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date10" name="seanca_date10" value="<?php echo isset($seanca_date10) ? $seanca_date10 : '' ?>" required>
+                       
+                                <label for="seanca_date11" class="control-label text-info">Data e Seances 11</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date11" name="seanca_date11" value="<?php echo isset($seanca_date11) ? $seanca_date11 : '' ?>" required>
+                         
+                                <label for="seanca_date12" class="control-label text-info">Data e Seances 12</label>
+                                <input type="text" class="form-control form-control-sm rounded-0" id="seanca_date12" name="seanca_date12" value="<?php echo isset($seanca_date12) ? $seanca_date12 : '' ?>" required>
+                            </div>
                         </div>
                     </fieldset>
 
@@ -180,21 +196,7 @@ if(isset($_GET['id'])){
         <a class="btn btn-flat btn-sn btn-dark" href="<?php echo base_url."admin?page=client" ?>">Anulo</a>
     </div>
 </div>
-<table id="tbl-clone" class="d-none">
-    <tr>
-        <td class="px-1 py-2 text-center align-middle">
-            <button class="btn-sn btn-flat btn-outline-danger rem_btn"><i class="fa fa-times"></i></button>
-        </td>
-        <td class="px-1 py-2 align-middle seanca">
-            <span class="visible"></span>
-            <input type="hidden" name="seanca_id[]">
-            <input type="hidden" name="seanca_date[]">
-        </td>
-        <td class="px-1 py-2 text-right align-middle seanca"><input type="text" name="seanca_date[]"></td>
-    </tr>
-</table>
 <script>
-    var seancat = $.parseJSON('<?php echo json_encode($seanca_arr) ?>');
     $(function(){
 		$('.select2').select2({
 			width:'resolve'
@@ -236,34 +238,7 @@ if(isset($_GET['id'])){
 				}
 			})
 		})
-
-        $('#add_to_list').click(function(){
-            var seanca_id = $('#seanca_id').val()
-            if(seanca_id <= 0)
-            return false;
-            if($('#seanca-list tbody tr[data-id="'+seanca_id+'"]').length > 0){
-                alert_toast("Sherbimi është në listë!","warning")
-                return false;
-            }
-            var name = seancat[seanca_id].name || 'N/A';
-            var seanca_date = seancat[seanca_id].seanca_date;
-            var tr = $('#tbl-clone tr').clone()
-            tr.attr('data-id',seanca_id)
-            tr.find('input[name="seanca_id[]"]').val(seanca_id)
-            tr.find('input[name="seanca_date[]"]').val(seanca_date)
-            tr.find('.seanca .visible').text(name)
-            tr.find('.seanca_date').text(seanca_date)
-            $('#seanca-list tbody').append(tr)
-            $('#seanca_id').val('').trigger('change')
-            tr.find('.rem_btn').click(function(){
-                rem_row($(this))
-            })
-        })
 	})
-    function rem_row(_this){
-        _this.closest('tr').remove()
-        calc()
-    }
 	function displayImg(input,_this) {
 	    if (input.files && input.files[0]) {
 	        var reader = new FileReader();
