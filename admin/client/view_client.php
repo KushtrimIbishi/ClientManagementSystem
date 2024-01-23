@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(isset($_GET['id'])){
     $qry = $conn->query("SELECT * FROM client_list where id = '{$_GET['id']}' ");
     if($qry->num_rows > 0){
@@ -28,13 +28,29 @@ if(isset($_GET['id'])){
                     object-fit: scale-down;
                     object-position: center center;
                 }
+                /* Add styles for the invoice image */
+                #invoice-image {
+                        width: 100%; /* Adjust the width as needed */
+                        height: auto;
+                        margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+                    }
             </style>
+                        <img id="invoice-image" src="../uploads/teethNumbers.png" alt="Invoice Image" class="mx-auto d-block">
             <h3 class="text-info">Klienti: <b><?php echo isset($client_code) ? $client_code :'' ?></b></h3>
-                <!--<div class="row">
-                    <div class="col-md-4">
-                        <img src="<?php echo validate_image(isset($id) ? "uploads/client-".$id.".png" :'')."?v=".(isset($date_updated) ? strtotime($date_updated) : "") ?>" alt="client Image" class="img-fluid bg-dark-gradient" id="cimg">
-                    </div>
-                </div>-->
+            
+            <!-- Display Portrait Photo -->
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="<?php echo validate_image(isset($id) ? "uploads/client-".$id."_portrait.png" :'')."?v=".(isset($date_updated) ? strtotime($date_updated) : "") ?>" alt="Portrait Photo" class="img-fluid bg-dark-gradient" id="portrait_img">
+                </div>
+            </div>
+            
+            <!-- Display X-Ray Photo -->
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="<?php echo validate_image(isset($id) ? "uploads/client-".$id."_xray.png" :'')."?v=".(isset($date_updated) ? strtotime($date_updated) : "") ?>" alt="X-Ray Photo" class="img-fluid bg-dark-gradient" id="xray_img">
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <dl>
@@ -45,8 +61,13 @@ if(isset($_GET['id'])){
                         <dt class="text-info">Datelindja:</dt>
                         <dd class="fw-bold pl-3"><?php echo isset($dob) ? date("F d, Y",strtotime($dob)) : "" ?></dd>
                     </dl>
+                    <div class="form-group col-md-6">
+                        <label for="remarks" class="control-label text-info">Shenime</label>
+                        <p><?php echo isset($remarks) ? $remarks : "N/A" ?></p>
+                    </div>
                 </div>
                 <div class="col-md-6">
+                    
                     <dl>
                         <dt class="text-info">Emaili:</dt>
                         <dd class="fw-bold pl-3"><?php echo isset($email) ? $email : "" ?></dd>

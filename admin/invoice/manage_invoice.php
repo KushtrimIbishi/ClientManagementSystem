@@ -58,7 +58,7 @@ if(isset($_GET['id'])){
                                 </select>
                             </div>
                             <div class="form-group col-sm-4">
-                               <button class="btn btn-flat btn-primary btn sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto tek lista</button>
+                               <button class="btn btn-flat btn-primary btn-sm" type="button" id="add_to_list"><i class="fa fa-plus"></i> Shto tek lista</button>
                             </div>
                         </div>
                         <table class="table table-hover table-striped table-bordered" id="service-list">
@@ -107,24 +107,6 @@ if(isset($_GET['id'])){
                                 </tr>
                                 <tr class="bg-lightblue text-light disabled">
                                     <th class="px-2 py-2 text-right" colspan="3">
-                                        Zbritja
-                                        <input type="number" style="width:50px" name="discount_perc" min="0" max="100"  value="<?php echo isset($discount_perc) ? $discount_perc : 0 ?>">
-                                        <input type="hidden" name="discount" value="<?php echo isset($discount) ? $discount : 0 ?>">
-                                        %
-                                    </th>
-                                    <th class="px-2 py-2 text-right discount"><?php echo isset($discount) ? number_format($discount,2) : "0.00" ?></th>
-                                </tr>
-                                <tr class="bg-lightblue text-light disabled">
-                                    <th class="px-2 py-2 text-right" colspan="3">
-                                        Taksa <small><i>(Perfshire)</i></small>
-                                        <input type="number" style="width:50px" name="tax_perc" min="0" max="100"  value="<?php echo isset($tax_perc) ? $tax_perc : 0 ?>">
-                                        <input type="hidden" name="tax" value="<?php echo isset($tax) ? $tax : 0 ?>">
-                                        %
-                                    </th>
-                                    <th class="px-2 py-2 text-right tax"><?php echo isset($tax) ? number_format($tax,2) : "0.00" ?></th>
-                                </tr>
-                                <tr class="bg-lightblue text-light disabled">
-                                    <th class="px-2 py-2 text-right" colspan="3">
                                         Totali
                                         <input type="hidden" name="total_amount" value="<?php echo isset($total_amount) ? $total_amount : 0 ?>">
                                     </th>
@@ -136,28 +118,31 @@ if(isset($_GET['id'])){
                             <div class="form-group">
                                 <label for="terminStart" class="control-label text-info">Fillimi i seancave:  </label>
                                 <input type="text" name="date_start" value="<?php echo isset($date_start) ? $date_start : 0 ?>">
-                                <!-- <br> -->
                                 <label for="terminEnd" class="control-label text-info">Mbarimi i Seancave:</label>
                                 <input type="text" name="date_end" placeholder="Data" value="<?php echo isset($date_end) ? $date_end : 0 ?>">
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="form-group col-md-6">
+                                <label for="amount_paid" class="control-label text-info">Shuma e paguar</label>
+                                <input type="number" name="amount_paid" class="form-control" value="<?php echo isset($amount_paid) ? $amount_paid : 0 ?>">
                                 <label for="remarks" class="control-label text-info">Shenime</label>
                                 <textarea name="remarks" id="remarks" class="form-control rounded-0" rows="3" style="resize:none"><?php echo isset($remarks) ? $remarks : "" ?></textarea>
                             </div>
-                            <?php if(isset($status)): ?>
                             <div class="form-group col-md-6">
+                                <label for="amount_due" class="control-label text-info">Mbetja</label>
+                                <input type="number" name="amount_due" class="form-control" value="<?php echo isset($amount_due) ? $amount_due : 0 ?>" readonly>
                                 <label for="status" class="control-label text-info">Statusi i pageses</label>
                                 <select name="status" id="status" class="custom-select selevt">
                                     <option value="0" <?php echo isset($status) && $status == 0 ? 'selected' : '' ?>>Ne pritje</option>
                                     <option value="1" <?php echo isset($status) && $status == 1 ? 'selected' : '' ?>>Paguar</option>
                                 </select>
                             </div>
-                            <?php endif; ?>
                         </div>
                     </fieldset>
                 </div>
+                
             </form>
         </div>
     </div>
@@ -177,10 +162,22 @@ if(isset($_GET['id'])){
             <input type="hidden" name="price[]">
         </td>
         <td class="px-1 py-2 align-middle description"></td>
-        <td class="px-1 py-2 text-right align-middle price"></td>
+        <td class="px-1 py-2 text-right align-middle price">
+            <input type="number" name="quantity[]" class="form-control" value="1">
+        </td>
     </tr>
 </table>
 <script>
+    $(document).on('input', '#service-list tbody input[name="quantity[]"]', function() {
+        calc();
+    });
+    $('input[name="amount_paid"]').on('input', function() {
+        var amount_paid = parseFloat($(this).val()) || 0;
+        var total_amount = parseFloat($('input[name="total_amount"]').val()) || 0;
+        var amount_due = total_amount - amount_paid;
+        $('input[name="amount_due"]').val(amount_due.toFixed(2));
+    });
+
     var services = $.parseJSON('<?php echo json_encode($service_arr) ?>');
     $(function(){
 		$('.select2').select2({

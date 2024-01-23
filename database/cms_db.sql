@@ -3,25 +3,41 @@
 -- Table structure for table `client_list`
 --
 
-CREATE TABLE `client_list` (
-  `id` int(30) NOT NULL,
-  `client_code` varchar(50) NOT NULL,
-  `password` text NOT NULL,
-  `fullname` text NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1 = Active, 2= Inactive',
-  `termin_date` varchar(255),
-  `termin_number` varchar(255),
-  `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+drop table client_list
+
+
+CREATE TABLE [client_list] (
+  [id] int NOT NULL,
+  [client_code] varchar(50) NOT NULL,
+  [password] text NOT NULL,
+  [fullname] text NOT NULL,
+  [status] tinyint NOT NULL DEFAULT 1,
+  [termin_date] varchar(255),
+  [termin_number] varchar(255),
+  [portrait_photo] varchar(255),  -- Assuming a varchar column to store file paths or URLs
+  [xray_photo] varchar(255),      -- Assuming a varchar column to store file paths or URLs
+  [date_created] datetime NOT NULL DEFAULT current_timestamp,
+  [date_updated] datetime NOT NULL DEFAULT current_timestamp,
+  [remarks] text DEFAULT NULL,
+);
+
+
+
 
 --
 -- Dumping data for table `client_list`
 --
 
-INSERT INTO `client_list` (`id`, `client_code`, `password`, `fullname`, `status`, `termin_date`, `termin_number`, `date_created`, `date_updated`) VALUES
-(5, '20220001', 'ad4817eaead4df26c8b6b4b48fb2158b', 'TestKlient, TestKlient ', 1, '2022-12-19 18:00:00', '1', '2022-08-24 18:42:47', '2022-08-24 18:42:47'),
-(7, '20220002', 'c74b6abf5344e6f2d4904a7b2c67eb32', 'Ibishi, Kushtrim ', 1, '2022-12-19 18:00:00', '2', '2022-08-31 06:35:14', '2022-12-16 10:46:41');
+INSERT INTO [client_list] ([id], [client_code], [password], [fullname], [status], [termin_date], [termin_number], [portrait_photo], [xray_photo], [date_created], [date_updated], [remarks]) VALUES
+(5, '20220001', 'ad4817eaead4df26c8b6b4b48fb2158b', 'TestKlient, TestKlient ', 1, '2022-12-19 18:00:00', '1', 'C:\Users\kusht\Desktop\Kusha\Doki\c42830496db49a385f9b4b9df6672294.jpg', 'C:\Users\kusht\Desktop\Kusha\Doki\download.jpeg', '2022-08-24 18:42:47', '2022-08-24 18:42:47', 'Sample Only'),
+(7, '20220002', 'c74b6abf5344e6f2d4904a7b2c67eb32', 'Ibishi, Kushtrim ', 1, '2022-12-19 18:00:00', '2', 'C:\Users\kusht\Desktop\Kusha\Doki\c42830496db49a385f9b4b9df6672294.jpg', 'C:\Users\kusht\Desktop\Kusha\Doki\download.jpeg', '2022-08-31 06:35:14', '2022-12-16 10:46:41', 'Sample Only 2');
+
+
+
+
+SELECT * FROM client_list
+
+DELETE FROM client_list
 
 -- --------------------------------------------------------
 
@@ -125,6 +141,10 @@ CREATE TABLE `invoice_list` (
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `invoice_list`
+ADD COLUMN `amount_paid` float NOT NULL DEFAULT 0 AFTER `status`,
+ADD COLUMN `amount_due` float NOT NULL DEFAULT 0 AFTER `amount_paid`;
 
 --
 -- Dumping data for table `invoice_list`

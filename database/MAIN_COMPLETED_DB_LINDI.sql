@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `client_list`
 --
 
+
 CREATE TABLE `client_list` (
   `id` int(30) NOT NULL,
   `client_code` varchar(50) NOT NULL,
@@ -36,15 +37,17 @@ CREATE TABLE `client_list` (
   `termin_date` varchar(255) DEFAULT NULL,
   `termin_number` varchar(255) DEFAULT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `remarks` text DEFAULT NULL
+);
 
 --
 -- Dumping data for table `client_list`
 --
 
-INSERT INTO `client_list` (`id`, `client_code`, `password`, `fullname`, `status`, `termin_date`, `termin_number`, `date_created`, `date_updated`) VALUES
-(32, '20220001', 'ad4817eaead4df26c8b6b4b48fb2158b', 'Fisteku, Filan ', 1, NULL, NULL, '2022-12-24 16:20:25', '2022-12-24 16:20:25');
+INSERT INTO `client_list` (`id`, `client_code`, `password`, `fullname`, `status`, `termin_date`, `termin_number`, `date_created`, `date_updated`, `remarks`)
+VALUES (32, '20220001', 'ad4817eaead4df26c8b6b4b48fb2158b', 'Fisteku, Filan ', 1, NULL, NULL, '2022-12-24 16:20:25', '2022-12-24 16:20:25', 'Any remarks go here');
+
 
 -- --------------------------------------------------------
 
@@ -167,7 +170,6 @@ INSERT INTO `doctor_meta` (`doctor_id`, `meta_field`, `meta_value`) VALUES
 --
 -- Table structure for table `invoice_list`
 --
-
 CREATE TABLE `invoice_list` (
   `id` int(30) NOT NULL,
   `invoice_code` varchar(50) NOT NULL,
@@ -182,8 +184,12 @@ CREATE TABLE `invoice_list` (
   `remarks` text DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0=pending, 1=Paid',
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `amount_paid` float NOT NULL DEFAULT 0,
+  `amount_due` float NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 
 --
 -- Dumping data for table `invoice_list`
